@@ -2,5 +2,25 @@
   "dependencies": {
     "express": "^4.17.3",
     "nodemon": "^2.0.15"
-  }
+  },
+
+  "name": "api-nodejs",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielajc/API-GabeFlix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielajc/API-GabeFlix/issues"
+  },
+  "homepage": "https://github.com/gabrielajc/API-GabeFlix#readme",
+  "description": ""
 }
