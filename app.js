@@ -36,11 +36,11 @@ app.get("/about", (req, res) => {
     urls: [
       {
         type: "github",
-        url: "https://github.com/gabrielajc",
+        urlink: "https://github.com/gabrielajc",
       },
       {
         type: "linkedin",
-        url: "https://www.linkedin.com/in/gabeclemente",
+        urlink: "https://www.linkedin.com/in/gabeclemente",
       },
     ],
   });
