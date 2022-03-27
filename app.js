@@ -49,6 +49,10 @@ app.get("/about", (req, res) => {
     res.json({
       msg: "Working",
     });
+    return res.status(400).json({
+      error: true,
+      msg: "not working",
+    });
   });
 
   app.use(function(req, res, next) {
