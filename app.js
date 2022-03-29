@@ -2,16 +2,22 @@ const express = require("express");
 const app = express();
 const uploadUser = require("./middlewares/uploadimage");
 const path = require("path");
+const cors = require('cors')
 
 const PORT = process.env.PORT || 8877;
 
-
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join("./public/uploads/series")));
 app.listen(PORT, () => {
   console.log("escutando na porta" + PORT);
 });
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://localhost:4200");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
 app.post("/upload-image", uploadUser.single("image"), async (req, res) => {
   if (req.file) {
@@ -55,8 +61,4 @@ app.get("/about", (req, res) => {
     });
   });
 
-  app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://localhost:8877, http://localhost:4200");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+  
