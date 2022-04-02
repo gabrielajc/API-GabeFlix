@@ -19,6 +19,7 @@ app.use(function(req, res, next) {
     next();
   });
 
+
 app.post("/upload-image", uploadUser.single("image"), async (req, res) => {
   if (req.file) {
     console.log(req.file);
