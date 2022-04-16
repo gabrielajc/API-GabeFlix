@@ -36,6 +36,76 @@ app.post("/upload-image", uploadUser.single("image"), async (req, res) => {
   });
 });
 
+app.get("/titulos", (req, res) => {
+  res.json({
+    titulos: [
+      {
+        titulo: "Orphan Black"
+      },
+      {
+        titulo: "Prison Break"
+      },
+      {
+        titulo: "Ponto Cego"
+      },
+      {
+        titulo: "Hanna"
+      },
+      {
+        titulo: "Good Girls"
+      },
+      {
+        titulo: "O Inocente"
+      },
+      {
+        titulo: "The 100"
+      },
+      {
+        titulo: "Vikings"
+      },
+      {
+        titulo: "The Cursed"
+      },
+      {
+        titulo: "The Vampire Diaries"
+      },
+      {
+        titulo: "The OA"
+      },
+      {
+        titulo: "Dark"
+      },
+      {
+        titulo: "The Office"
+      },
+      {
+        titulo: "Bates Motel"
+      },
+      {
+        titulo: "Glitch"
+      },
+      {
+        titulo: "Expresso Do Amanhã"
+      },
+      {
+        titulo: "Behind her Eyes"
+      },
+      {
+        titulo: "Inacreditável"
+      },
+      {
+        titulo: "Colony"
+      },
+      {
+        titulo: "Warrior Nun"
+      },
+      {
+        titulo: "Vis a Vis"
+      },
+    ],
+  });
+});
+
 app.get("/about", (req, res) => {
   res.json({
     name: "Gabriela Clemente",
@@ -52,6 +122,7 @@ app.get("/about", (req, res) => {
     ],
   });
 }),
+
   app.get("/", (req, res) => {
     res.json({
       msg: "Working",
